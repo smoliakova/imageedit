@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var numberOfSize: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
  
     
     @IBAction func rotateImage(_ sender: Any) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1.5) {
             let angle = Double((sender as AnyObject).titleForSegment(at: (sender as AnyObject).selectedSegmentIndex)!)!
             self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(angle/180 * .pi))
         }
@@ -35,11 +36,7 @@ class ViewController: UIViewController {
         let stepperValue = Int(sender.value)
         numberOfSize.text = String(stepperValue)
         
-        
-        
-  // self.numberOfSize.text = sender.value.description
-        
-        
+
         
     }
     
