@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     }
  
     
+    @IBAction func offsetImage(_ sender: UISlider) {
+    }
+    
     @IBAction func rotateImage(_ sender: Any) {
         UIView.animate(withDuration: 1.5) {
             let angle = Double((sender as AnyObject).titleForSegment(at: (sender as AnyObject).selectedSegmentIndex)!)!
@@ -36,10 +39,8 @@ class ViewController: UIViewController {
         let stepperValue = Int(sender.value)
         numberOfSize.text = String(stepperValue)
         
-
-        
     }
-    
+
 }
 
 
